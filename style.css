@@ -5,6 +5,11 @@ body {
   color: #eee;
 }
 
+a {
+  text-decoration: none;
+  color: #b84dff;
+}
+
 .hero {
   padding: 40px;
   text-align: center;
@@ -39,7 +44,80 @@ h1 {
   box-shadow: 0 0 20px #b84dff66;
 }
 
-h2 {
-  color: #b84dff;
-  margin-bottom: 10px;
+.works-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #b84dff;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.works-link:hover {
+  background-color: #9900cc;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  padding: 15px 25px;
+  border-radius: 15px;
+  width: fit-content;
+  border: 1px solid #333;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.pulse {
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseAnim {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }

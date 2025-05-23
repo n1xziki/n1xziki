@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لوحة التحكم | N1xZIKI</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 300px;
+    }
+    button {
+      background-color: #b84dff;
+      color: #fff;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1 class="fade-in">لوحة تحكم N1xZIKI</h1>
+    <form onsubmit="addProject(event)">
+      <input type="text" id="project-name" placeholder="اسم المشروع" required />
+      <input type="url" id="project-link" placeholder="رابط المشروع" required />
+      <button type="submit">إضافة المشروع</button>
+    </form>
+    <div id="output"></div>
+  </div>
+  <script>
+    function addProject(e) {
+      e.preventDefault();
+      const name = document.getElementById('project-name').value;
+      const link = document.getElementById('project-link').value;
+      const output = document.getElementById('output');
+      output.innerText = `تمت إضافة المشروع: ${name} - ${link}\n\n * ملاحظة: تحتاج تعديل ملف works.html يدوياً.`;
+    }
+  </script>
+</body>
+</html>

@@ -1,31 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>N1xZIKI | SAMP Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>N1xZIKI - مبرمج SAMP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 50px 20px;
+      background: linear-gradient(145deg, #1a1a1a, #2c003e);
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #a259ff;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      background-color: #e63946;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c62828;
+    }
+
+    #works {
+      display: none;
+      padding: 40px 20px;
+      background-color: #1a1a1a;
+    }
+
+    .work-item {
+      margin: 20px auto;
+      padding: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+  </style>
 </head>
 <body>
-  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
-  <div class="hero">
-    <h1 class="fade-in">N1xZIKI</h1>
-    <p class="fade-in-delay">مبرمج SAMP محترف منذ أكثر من 4 سنوات</p>
-    <div class="sections">
-      <div class="card slide-up">
-        <h2>البرمجة الداخلية</h2>
-        <p>تحكم كامل بالأنظمة الداخلية والتعديلات المخصصة.</p>
-      </div>
-      <div class="card slide-up">
-        <h2>البرمجة الخارجية</h2>
-        <p>تصميم واجهات، أنظمة تسجيل، ودمج قواعد البيانات.</p>
-      </div>
-      <div class="card slide-up">
-        <h2>المابينق والسكربتات</h2>
-        <p>تصميم مابات متقدمة ودمج السكربتات بسلاسة.</p>
-      </div>
+
+  <header>
+    <h1>N1xZIKI</h1>
+    <p>مبرمج SAMP محترف بخبرة 4 سنوات في البرمجة والتصميم.</p>
+    <button class="btn" onclick="showWorks()">عرض أعمالي</button>
+  </header>
+
+  <section id="works">
+    <div class="work-item">
+      <h2>نظام إدارة عصابات</h2>
+      <p>سيستم احترافي مع لوحة تحكم كاملة وتحكم في اللاعبين والرتب.</p>
     </div>
-    <a class="works-link pulse" href="works.html" onclick="document.getElementById('click-sound').play();">عرض الأعمال</a>
-  </div>
+    <div class="work-item">
+      <h2>مابات مخصصة</h2>
+      <p>تصميم مابينقات واقعية ومناسبة للسيرفرات العربية والعالمية.</p>
+    </div>
+    <div class="work-item">
+      <h2>سكريبت دخول مميز</h2>
+      <p>سكريبت دخول مؤثر بصرياً مع نظام حماية وربط بقاعدة البيانات.</p>
+    </div>
+  </section>
+
+  <script>
+    function showWorks() {
+      document.getElementById("works").style.display = "block";
+      document.querySelector(".btn").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
